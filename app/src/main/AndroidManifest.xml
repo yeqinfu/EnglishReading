@@ -37,6 +37,7 @@
             android:theme="@style/AppTheme.NoActionBar">
 
         </activity>
+        <activity android:name=".MyH5Activity"/>
     </application>
 
 </manifest>
