@@ -60,6 +60,7 @@ public class UpdateManager {
 
         context = ctx;
         return mUpdateManager;
+
     }
 
     /**
