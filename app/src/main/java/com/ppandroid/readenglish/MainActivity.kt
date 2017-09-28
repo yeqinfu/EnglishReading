@@ -14,6 +14,7 @@ import com.ppandroid.readenglish.base.AC_Base
 import com.ppandroid.readenglish.bean.home.BN_Pic
 import com.ppandroid.readenglish.http.OkHttpUtils
 import com.ppandroid.readenglish.http.callback.StringCallback
+import com.ppandroid.readenglish.utils.DebugLog
 import com.ppandroid.readenglish.utils.glide.GlideUtils
 import kotlinx.android.synthetic.main.activity_main.*
 import okhttp3.Call
@@ -34,13 +35,14 @@ class MainActivity : AC_Base() {
 
     private fun loadContent() {
         var url = "http://gank.io/api/data/%E7%A6%8F%E5%88%A9/10/1"
-
+        DebugLog.d("http",url)
         OkHttpUtils.get().url(url).build().execute(object : StringCallback() {
             override fun onError(call: Call, e: Exception, id: Int) {
                 e.printStackTrace()
             }
 
             override fun onResponse(response: String, id: Int) {
+                DebugLog.d("http",response)
                 var gson= Gson()
                 var response=gson.fromJson(response,BN_Pic::class.java)
                 response?.let {
