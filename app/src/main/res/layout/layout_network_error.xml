@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by yeqinfu on 17-9-27 上午9:35
+  ~ Copyright (c) JXT All rights reserved.
+  -->
+
+<com.ppandroid.readenglish.base.NetWorkErrorView xmlns:android="http://schemas.android.com/apk/res/android"
+                       android:id="@+id/network_error"
+                       android:background="@color/white"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:visibility="gone">
+    <!--网络异常布局-->
+
+    <ImageView
+        android:id="@+id/iv_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:src="@drawable/network_error"/>
+
+    <TextView
+        android:id="@+id/tv_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_img"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="网络不给力，点击屏幕重试~"/>
+
+
+</com.ppandroid.readenglish.base.NetWorkErrorView>

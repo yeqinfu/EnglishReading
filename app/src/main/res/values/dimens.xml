@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by yeqinfu on 17-9-27 上午9:35
+  ~ Copyright (c) JXT All rights reserved.
+  -->
+
+<resources>
+    <dimen name="default_stroke_size">18dp</dimen>
+    <dimen name="spacing_medium">8dp</dimen>
+    <dimen name="chart_size">250dp</dimen>
+    <dimen name="stroke_size">18dp</dimen>
+</resources>

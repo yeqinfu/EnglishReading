@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Created by yeqinfu on 17-9-27 上午9:35
+  ~ Copyright (c) JXT All rights reserved.
+  -->
+
+<set xmlns:android="http://schemas.android.com/apk/res/android" >
+    <translate
+        android:duration="500"
+        android:fromYDelta="200%"
+        android:toYDelta="0%" />
+</set>

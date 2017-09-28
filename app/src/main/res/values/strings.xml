@@ -1,0 +1,22 @@
+<!--
+  ~ Created by yeqinfu on 17-9-27 上午9:35
+  ~ Copyright (c) JXT All rights reserved.
+  -->
+
+<resources>
+    <string name="app_name">EnglishReading</string>
+    <string name="msg">开奖时间间隔设定</string>
+    <string name="et_put">本期投注金额</string>
+    <string name="btn_confirm">确定</string>
+    <string name="et_put_number">投注数字</string>
+    <string name="btn_confirm2">增额投注</string>
+    <string name="company_name">福建省节效通有限公司</string>
+    <string name="str_msg_energy">能耗信息</string>
+    <string name="service_error">服务器异常</string>
+    <string name="token_invalid">登录过期请从新登陆！</string>
+    <string name="save">保存</string>
+    <string name="input_msg">请输入</string>
+    <string name="download_complete_flag">download_complete_flag</string>
+    <string name="updateDate">updateDate</string>
+    <string name="versionName">versionName</string>
+</resources>

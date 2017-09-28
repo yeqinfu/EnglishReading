@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by yeqinfu on 17-9-27 上午9:35
+  ~ Copyright (c) JXT All rights reserved.
+  -->
+
+<resources>
+
+    <!--特殊标题-->
+    <dimen name="special_title">20sp</dimen>
+    <!--分类标题-->
+    <dimen name="classes_title">19sp</dimen>
+
+    <!--文章标题 加粗-->
+    <dimen name="article_title">17sp</dimen>
+
+    <!--用户名称 加粗-->
+    <dimen name="user_name">15sp</dimen>
+
+    <!--一级标题-->
+    <dimen name="first_title">16sp</dimen>
+    <!--bar级标题-->
+    <dimen name="bar_title">14sp</dimen>
+
+    <!--正文-->
+    <dimen name="normal_text">15sp</dimen>
+
+    <!--二级标题-->
+    <dimen name="second_title">13sp</dimen>
+
+    <!--副标题-->
+    <dimen name="sub_title">12sp</dimen>
+
+    <!--喜欢浏览收藏时间-->
+    <dimen name="time_text">12sp</dimen>
+    <!--数字-->
+    <dimen name="number_text">11sp</dimen>
+
+
+
+
+
+    
+</resources>

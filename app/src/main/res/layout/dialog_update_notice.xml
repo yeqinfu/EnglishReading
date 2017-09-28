@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Created by yeqinfu on 17-9-27 上午9:35
+  ~ Copyright (c) JXT All rights reserved.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="300dp"
+              android:layout_height="400dp"
+              android:background="@color/white"
+              android:gravity="center_horizontal"
+              android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/update_pic"/>
+
+    <TextView
+
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="检测到新版本"
+        android:textColor="@color/color_02"
+        android:textSize="19sp"/>
+
+    <TextView
+        android:id="@+id/versionNameTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="版本号:"
+        android:textColor="@color/color_02"
+        android:textSize="14sp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="10dp"
+        android:scrollbars="none">
+
+        <TextView
+            android:id="@+id/logTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="文件大小文件大小文件大小文件大小文件大小文件大小文件大小"
+            android:textColor="@color/color_02"
+            android:textSize="16sp"/>
+    </ScrollView>
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:checked="false"
+        android:text="3天内不再提醒"
+        android:textColor="#e5e5e5"
+        android:textSize="16sp"
+        android:visibility="visible"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e5e5e5"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/cancelBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center"
+            android:text="退出应用"
+            android:textColor="#4b4b4b"
+            android:textSize="18sp"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="#e5e5e5"/>
+
+        <Button
+            android:id="@+id/updateBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center"
+            android:text="现在更新"
+            android:textColor="@color/color_01"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+</LinearLayout>

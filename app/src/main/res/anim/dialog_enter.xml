@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by yeqinfu on 17-9-27 上午9:35
+  ~ Copyright (c) JXT All rights reserved.
+  -->
+
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <alpha android:fromAlpha="0.2"
+        android:toAlpha="1.0"/>
+</set>

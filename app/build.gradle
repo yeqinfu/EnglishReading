@@ -1,0 +1,84 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+android {
+    compileSdkVersion Integer.parseInt(project.ANDROID_BUILD_SDK_VERSION)
+    buildToolsVersion project.ANDROID_BUILD_TOOLS_VERSION
+    productFlavors {
+        ppandroid {}
+    }
+    defaultConfig {
+        applicationId "com.ppandroid.readenglish"
+        minSdkVersion Integer.parseInt(project.ANDROID_BUILD_MIN_SDK_VERSION)
+        targetSdkVersion Integer.parseInt(project.ANDROID_BUILD_TARGET_SDK_VERSION)
+        versionCode 1
+        versionName "1.0.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    signingConfigs {
+        BZWConfigs {
+            storeFile file("android.keystore")
+            storePassword "520wyd"
+            keyAlias "android.keystore"
+            keyPassword "520wyd"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.BZWConfigs
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    def outputFile = output.outputFile
+                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                        // 输出apk名称为ZXBZW_v1.0_2015-01-15_wandoujia.apk
+                        def fileName = "ReadEnglish_v${defaultConfig.versionName}_${releaseTime()}_${variant.productFlavors[0].name}.apk"
+                        output.outputFile = new File(outputFile.parent, fileName)
+                    }
+                }
+            }
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile "com.android.support:design:$support_version"
+    /**Kotlin*/
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    /**kotlin 反射包，包方法过大，谨慎添加*/
+    /*   compile "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"*/
+    compile "org.jetbrains.anko:anko-common:$anko_version"
+    //Optional compile for GCM (Google Cloud Messaging).
+    // compile 'com.google.android.gms:play-services-gcm:9.4.0'
+    /*date picker 建议自己拷贝下来自己维护*/
+   // compile 'com.github.franmontiel:PersistentCookieJar:1.0.1'
+    compile "com.android.support:appcompat-v7:$support_version"
+    compile "com.squareup.okhttp3:okhttp:$okhttp_version"
+    compile "com.github.bumptech.glide:glide:$glide_version"
+
+
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.3'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.google.code.gson:gson:2.2.4'
+    compile 'com.android.support.constraint:constraint-layout:1.0.1'
+    testCompile 'junit:junit:4.12'
+    //leaks
+    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.1'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
+}
+/**
+ * 从Manifest.xml中读取版本号
+ **/
+def readVersion() {
+    return android.defaultConfig.versionName;
+}
+
+def releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+}

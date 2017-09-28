@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by yeqinfu on 17-9-27 上午9:35
+  ~ Copyright (c) JXT All rights reserved.
+  -->
+
+<resources>
+    <string-array name="array_number">
+        <item>5</item>
+        <item>10</item>
+        <item>20</item>
+        <item>60</item>
+        <item>100</item>
+        <item>2</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="fg_setting">
+        <item>仪表数据</item>
+        <item>分项数据</item>
+        <item>区域数据</item>
+        <item>重点设备</item>
+        <item>能源计费</item>
+    </string-array>
+    <string-array name="fg_devices_info">
+        <item>数据监测</item>
+        <item>账台信息</item>
+    </string-array>
+    <string-array name="fg_base_analysis">
+        <item>日</item>
+        <item>月</item>
+        <item>年</item>
+        <item>总</item>
+    </string-array>
+    <string-array name="fg_base_h_analysis">
+        <item>今日</item>
+        <item>本月</item>
+        <item>本年</item>
+        <item>全部</item>
+    </string-array>
+    <string-array name="fg_base_h_analysis2">
+        <item>今日</item>
+        <item>本周</item>
+        <item>本月</item>
+        <item>本年</item>
+        <item>全部</item>
+    </string-array>
+    <string-array name="fg_base_h_analysis3">
+        <item>今日</item>
+        <item>本周</item>
+        <item>本月</item>
+        <item>本年</item>
+    </string-array>
+    <string-array name="fg_base_h_analysis4">
+        <item>今日</item>
+        <item>本周</item>
+        <item>本月</item>
+    </string-array>
+</resources>
